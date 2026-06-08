@@ -1,0 +1,466 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>GradientDescentPfunc &#8212; Osprey 3.2.304 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">GradientDescentPfunc</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.kstar.pfunc.GradientDescentPfunc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>GradientDescentPfunc</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="gradientdescentpfunc">
+<h1>GradientDescentPfunc<a class="headerlink" href="#gradientdescentpfunc" title="Permalink to this headline">¶</a></h1>
+<p>Java class: <code class="docutils literal notranslate"><span class="pre">edu.duke.cs.osprey.kstar.pfunc.GradientDescentPfunc</span></code></p>
+<blockquote>
+<div><p>This partition function calculator estimates the partition function value
+by alternating between two operations:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>compute lower energy bounds on conformations to refine the pfunc upper bound</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt>and:</dt>
+<dd><ol class="first last arabic simple" start="2">
+<li>compute upper energy bounds on conformations to refine the pfunc lower bound</li>
+</ol>
+</dd>
+</dl>
+<p>This implementation will always do operation 1 first, then operation 2 to get off
+the initial “flat spot” the pfunc surface.</p>
+<p>After that, this implementation is an attempt at a gradient-descent type partition
+function calculator. At each step, the operation that maximizes the drop in delta
+(according to slope sampling heuristics) is chosen.</p>
+<p>This implementation should also perform much better whe operation 2 is
+not orders of magnitude slower than operation 1 (when e.g. we’re reading
+energies out of a cache).</p>
+</div></blockquote>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<p><em>This is a Java class which has been exposed to the Python API. For more information
+on how to call constructors on Java objects, see the tutorial:</em> <a class="reference internal" href="constructors.html#constructors"><span class="std std-ref">Accessing Java Classes from Python</span></a>.</p>
+<hr class="docutils" />
+<dl class="method">
+<dt id="GradientDescentPfunc.GradientDescentPfunc">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">GradientDescentPfunc</code><span class="sig-paren">(</span><em>ecalc</em>, <em>confSearch</em>, <em>numConfsBeforePruning</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.GradientDescentPfunc" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ecalc</strong> (<a class="reference internal" href="api.energy.ConfEnergyCalculator.html" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfEnergyCalculator</span></code></a>) – </li>
+<li><strong>confSearch</strong> (<a class="reference internal" href="api.confspace.ConfSearch.html" title="edu.duke.cs.osprey.confspace.ConfSearch"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfSearch</span></code></a>) – </li>
+<li><strong>numConfsBeforePruning</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigInteger</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">GradientDescentPfunc</code><span class="sig-paren">(</span><em>ecalc</em>, <em>upperBoundConfs</em>, <em>lowerBoundConfs</em>, <em>numConfsBeforePruning</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ecalc</strong> (<a class="reference internal" href="api.energy.ConfEnergyCalculator.html" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfEnergyCalculator</span></code></a>) – </li>
+<li><strong>upperBoundConfs</strong> (<a class="reference internal" href="api.confspace.ConfSearch.html" title="edu.duke.cs.osprey.confspace.ConfSearch"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfSearch</span></code></a>) – </li>
+<li><strong>lowerBoundConfs</strong> (<a class="reference internal" href="api.confspace.ConfSearch.html" title="edu.duke.cs.osprey.confspace.ConfSearch"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfSearch</span></code></a>) – </li>
+<li><strong>numConfsBeforePruning</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigInteger</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="GradientDescentPfunc.ecalc">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">ecalc</code><a class="headerlink" href="#GradientDescentPfunc.ecalc" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">edu.duke.cs.osprey.energy.ConfEnergyCalculator</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="GradientDescentPfunc.numConfsBeforePruning">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">numConfsBeforePruning</code><a class="headerlink" href="#GradientDescentPfunc.numConfsBeforePruning" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">java.math$BigInteger</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="GradientDescentPfunc.setInstanceId">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">setInstanceId</code><span class="sig-paren">(</span><em>instanceId</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.setInstanceId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>instanceId</strong> (<em>int</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.instanceIdOrThrow">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">instanceIdOrThrow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.instanceIdOrThrow" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.setPreciseBcalc">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">setPreciseBcalc</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.setPreciseBcalc" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, uses BoltzmannCalculator.calcPrecise() instead of BoltzmannCalculator.calc().
+The “precise” version of the function has more precision,
+and much much better performance on inputs with higher magnitude (eg, -100, -1000).
+Generally, this results in significantly faster performance for pfunc calculations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<em>bool</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#" title="edu.duke.cs.osprey.kstar.pfunc.GradientDescentPfunc"><code class="xref java java-ref docutils literal notranslate"><span class="pre">GradientDescentPfunc</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.putTaskContexts">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">putTaskContexts</code><span class="sig-paren">(</span><em>contexts</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.putTaskContexts" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contexts</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskExecutor</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.setReportProgress">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">setReportProgress</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.setReportProgress" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<em>bool</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.setConfListener">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">setConfListener</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.setConfListener" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<code class="docutils literal notranslate"><span class="pre">ConfListener</span></code>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.getStatus">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">getStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.getStatus" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Status</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.getValues">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">getValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.getValues" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Values</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.getNumConfsEvaluated">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">getNumConfsEvaluated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.getNumConfsEvaluated" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.getParallelism">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">getParallelism</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.getParallelism" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.setConfDB">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">setConfDB</code><span class="sig-paren">(</span><em>confDB</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.setConfDB" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>confDB</strong> (<a class="reference internal" href="api.confspace.ConfDB.html" title="edu.duke.cs.osprey.confspace.ConfDB"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfDB</span></code></a>) – </li>
+<li><strong>key</strong> (<a class="reference internal" href="api.confspace.ConfDB.html" title="edu.duke.cs.osprey.confspace.ConfDB"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfDB</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.setUseExternalMemory">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">setUseExternalMemory</code><span class="sig-paren">(</span><em>val</em>, <em>rcs</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.setUseExternalMemory" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>val</strong> (<em>bool</em>) – </li>
+<li><strong>rcs</strong> (<a class="reference internal" href="api.astar.conf.RCs.html" title="edu.duke.cs.osprey.astar.conf.RCs"><code class="xref java java-ref docutils literal notranslate"><span class="pre">RCs</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.traceTo">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">traceTo</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.traceTo" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<a class="reference internal" href="api.kstar.pfunc.PfuncSurface.html" title="edu.duke.cs.osprey.kstar.pfunc.PfuncSurface"><code class="xref java java-ref docutils literal notranslate"><span class="pre">PfuncSurface</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.init">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">init</code><span class="sig-paren">(</span><em>targetEpsilon</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.init" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>targetEpsilon</strong> (<em>float</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.setStabilityThreshold">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">setStabilityThreshold</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.setStabilityThreshold" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.compute">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">compute</code><span class="sig-paren">(</span><em>maxNumConfs</em><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.compute" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>maxNumConfs</strong> (<em>int</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="GradientDescentPfunc.makeResult">
+<code class="descclassname">GradientDescentPfunc.</code><code class="descname">makeResult</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GradientDescentPfunc.makeResult" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.kstar.pfunc.PartitionFunction.html" title="edu.duke.cs.osprey.kstar.pfunc.PartitionFunction"><code class="xref java java-ref docutils literal notranslate"><span class="pre">PartitionFunction</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Donald Lab, Department of Computer Science, Duke University. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

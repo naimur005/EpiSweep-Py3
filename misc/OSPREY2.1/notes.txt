@@ -1,0 +1,27 @@
+Differences from the 2.1 beta December 2012 version downloaded from Duke:
+
+* Steric clash test for a pair of rotamers only checks their atoms, not atoms of other residues (incl. backbone). This makes sense to me anyway, and is a lot faster. Steric clash between a rotamer and the template is stored in the one-body term only.
+
+* A new option in DEE.cfg: 
+*** energiesOnlyContacts true
+  => only evaluate energies between pairs of residues within the contact threshold defined by an already existing parameter:
+*** distCutoff 12.0
+  where the distance is CB-CB (CA for Gly)
+  can bump the threshold up to be more conservative (and slower)
+
+* A new option in DEE.cfg:
+*** pruneOnly true
+  => stop after DEE, before A*
+
+* A new option in DEE.cfg
+*** rotamerChoiceName Rotamer file name (runName + "_rot_choices.csv" if not specified or given)
+  => Three column csv file
+    1) position (starting from 1)
+    2) amino acid (1 letter code)
+    3) rotamer index (integer)
+
+See the test directory for an example with lysostaphin domain 2.
+
+*** ematOnly true
+   => stop after energy matrix construction
+   => When rerun, it keeps going to pruning

@@ -1,0 +1,1038 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>ConfEnergyCalculator &#8212; Osprey 3.2.304 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">ConfEnergyCalculator</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a></li>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.energy.ConfEnergyCalculator.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>ConfEnergyCalculator</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="confenergycalculator">
+<h1>ConfEnergyCalculator<a class="headerlink" href="#confenergycalculator" title="Permalink to this headline">¶</a></h1>
+<p>Java class: <code class="docutils literal notranslate"><span class="pre">edu.duke.cs.osprey.energy.ConfEnergyCalculator</span></code></p>
+<blockquote>
+<div><p>Calculate energy for molecules created from conformation spaces.</p>
+<p>Provides support for applying conformation energy modifications,
+such as reference energies, residue entropies, and energy partitions.</p>
+</div></blockquote>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<p><em>This is a Java class which has been exposed to the Python API. For more information
+on how to call constructors on Java objects, see the tutorial:</em> <a class="reference internal" href="constructors.html#constructors"><span class="std std-ref">Accessing Java Classes from Python</span></a>.</p>
+<hr class="docutils" />
+<dl class="method">
+<dt id="ConfEnergyCalculator.ConfEnergyCalculator">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">ConfEnergyCalculator</code><span class="sig-paren">(</span><em>other</em>, <em>ecalc</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.ConfEnergyCalculator" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>other</strong> (<a class="reference internal" href="#" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ConfEnergyCalculator</span></code></a>) – </li>
+<li><strong>ecalc</strong> (<a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.confSpace">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">confSpace</code><a class="headerlink" href="#ConfEnergyCalculator.confSpace" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">SimpleConfSpace</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.ecalc">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">ecalc</code><a class="headerlink" href="#ConfEnergyCalculator.ecalc" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">edu.duke.cs.osprey.energy.EnergyCalculator</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.epart">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">epart</code><a class="headerlink" href="#ConfEnergyCalculator.epart" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">edu.duke.cs.osprey.energy.EnergyPartition</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.eref">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">eref</code><a class="headerlink" href="#ConfEnergyCalculator.eref" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">edu.duke.cs.osprey.ematrix.SimpleReferenceEnergies</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.addResEntropy">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">addResEntropy</code><a class="headerlink" href="#ConfEnergyCalculator.addResEntropy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.amat">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">amat</code><a class="headerlink" href="#ConfEnergyCalculator.amat" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">edu.duke.cs.osprey.energy.approximation.ApproximatorMatrix</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.approximationErrorBudget">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">approximationErrorBudget</code><a class="headerlink" href="#ConfEnergyCalculator.approximationErrorBudget" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.addShellInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">addShellInters</code><a class="headerlink" href="#ConfEnergyCalculator.addShellInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ConfEnergyCalculator.tasks">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">tasks</code><a class="headerlink" href="#ConfEnergyCalculator.tasks" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">edu.duke.cs.osprey.parallelism.TaskExecutor</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="ConfEnergyCalculator.confSpaceIteration">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">confSpaceIteration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.confSpaceIteration" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">ConfSpaceIteration</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.getNumRequests">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">getNumRequests</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.getNumRequests" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of requested energy calculations,
+including ones cached in a conf DB</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.getNumCalculations">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">getNumCalculations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.getNumCalculations" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of energy calculations performed,
+excluding values cached in a conf DB</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.getNumConfDBReads">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">getNumConfDBReads</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.getNumConfDBReads" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of energies served from a conf DB</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.resetCounters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">resetCounters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.resetCounters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makeFragInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makeFragInters</code><span class="sig-paren">(</span><em>frag</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makeFragInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makeShellInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makeShellInters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makeShellInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makeSingleInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makeSingleInters</code><span class="sig-paren">(</span><em>pos</em>, <em>rc</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makeSingleInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos</strong> (<em>int</em>) – </li>
+<li><strong>rc</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makePairInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makePairInters</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makePairInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makeTupleInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makeTupleInters</code><span class="sig-paren">(</span><em>tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makeTupleInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tuple</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makeTripleCorrectionInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makeTripleCorrectionInters</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em>, <em>pos3</em>, <em>rc3</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makeTripleCorrectionInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+<li><strong>pos3</strong> (<em>int</em>) – </li>
+<li><strong>rc3</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makeQuadCorrectionInters">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makeQuadCorrectionInters</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em>, <em>pos3</em>, <em>rc3</em>, <em>pos4</em>, <em>rc4</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makeQuadCorrectionInters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+<li><strong>pos3</strong> (<em>int</em>) – </li>
+<li><strong>rc3</strong> (<em>int</em>) – </li>
+<li><strong>pos4</strong> (<em>int</em>) – </li>
+<li><strong>rc4</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcIntraEnergy">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcIntraEnergy</code><span class="sig-paren">(</span><em>pos</em>, <em>rc</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcIntraEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos</strong> (<em>int</em>) – </li>
+<li><strong>rc</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcSingleEnergy">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcSingleEnergy</code><span class="sig-paren">(</span><em>pos</em>, <em>rc</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcSingleEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos</strong> (<em>int</em>) – </li>
+<li><strong>rc</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcSingleEnergy</code><span class="sig-paren">(</span><em>frag</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcPairEnergy">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcPairEnergy</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcPairEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcPairEnergy</code><span class="sig-paren">(</span><em>frag</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcTupleEnergy">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcTupleEnergy</code><span class="sig-paren">(</span><em>frag</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcTupleEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcShellEnergy">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcShellEnergy</code><span class="sig-paren">(</span><em>frag</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcShellEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcEnergy">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>frag</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the energy of a molecule fragment generated from a conformation space using residue interactions generated by the energy partition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>frag</em>, <em>inters</em><span class="sig-paren">)</span></dt>
+<dd><p>Calculate the energy of a molecule fragment generated from a conformation space.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcEnergyAsync">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>frag</em>, <em>inters</em>, <em>listener</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcEnergyAsync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a> &gt;) – Callback function that will receive the energy and associated molecule pose. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>frag</em>, <em>listener</em><span class="sig-paren">)</span></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <a class="reference internal" href="api.energy.EnergyCalculator.html" title="edu.duke.cs.osprey.energy.EnergyCalculator"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergyCalculator</span></code></a> &gt;) – Callback function that will receive the energy and associated molecule pose. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>frag</em>, <em>table</em><span class="sig-paren">)</span></dt>
+<dd><p>Version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>
+using the specified ConfDB table as a cache.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>frag</em>, <em>inters</em>, <em>table</em><span class="sig-paren">)</span></dt>
+<dd><p>Version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>
+using the specified ConfDB table as a cache.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>frag</em>, <em>table</em>, <em>listener</em><span class="sig-paren">)</span></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <code class="docutils literal notranslate"><span class="pre">Double</span></code> &gt;) – Callback function that will receive the energy. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>frag</em>, <em>inters</em>, <em>table</em>, <em>listener</em><span class="sig-paren">)</span></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>frag</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – The assignments of the conformation space</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <code class="docutils literal notranslate"><span class="pre">Double</span></code> &gt;) – Callback function that will receive the energy. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>conf</em><span class="sig-paren">)</span></dt>
+<dd><p>Calculate energy of a scored conformation. Residue interactions are generated from the energy partition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>conf</em>, <em>table</em><span class="sig-paren">)</span></dt>
+<dd><p>Calculate energy of a scored conformation, using the specified ConfDB table as a cache.
+Residue interactions are generated from the energy partition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>conf</em>, <em>listener</em><span class="sig-paren">)</span></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;) – Callback function that will receive the energy. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>conf</em>, <em>table</em>, <em>listener</em><span class="sig-paren">)</span></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>,
+using the specified ConfDB table as a cache.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;) – Callback function that will receive the energy. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>conf</em>, <em>inters</em><span class="sig-paren">)</span></dt>
+<dd><p>Calculate energy of a scored conformation with specified residue interactions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergy</code><span class="sig-paren">(</span><em>conf</em>, <em>inters</em>, <em>table</em><span class="sig-paren">)</span></dt>
+<dd><p>Calculate energy of a scored conformation with specified residue interactions,
+using the specified ConfDB table as a cache.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>conf</em>, <em>inters</em>, <em>listener</em><span class="sig-paren">)</span></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;) – Callback function that will receive the energy. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcEnergyAsync</code><span class="sig-paren">(</span><em>conf</em>, <em>inters</em>, <em>table</em>, <em>listener</em><span class="sig-paren">)</span></dt>
+<dd><p>Asynchronous version of <a class="reference internal" href="#ConfEnergyCalculator.calcEnergy" title="edu.duke.cs.osprey.energy.ConfEnergyCalculator#calcEnergy"><code class="xref java java-ref docutils literal notranslate"><span class="pre">calcEnergy</span></code></a>,
+using the specified ConfDB table as a cache.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>conf</strong> (<a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a>) – The conformation to analyze</li>
+<li><strong>inters</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.html" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – The residue interactions</li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – the confDB table</li>
+<li><strong>listener</strong> (<a class="reference internal" href="api.parallelism.TaskExecutor.TaskListener.html" title="edu.duke.cs.osprey.parallelism.TaskExecutor$TaskListener"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TaskListener</span></code></a> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;) – Callback function that will receive the energy. Called on a listener thread which is separate from the calling thread.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.calcAllEnergies">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcAllEnergies</code><span class="sig-paren">(</span><em>confs</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.calcAllEnergies" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>confs</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a> &gt;) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcAllEnergies</code><span class="sig-paren">(</span><em>confs</em>, <em>table</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>confs</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a> &gt;) – </li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcAllEnergies</code><span class="sig-paren">(</span><em>confs</em>, <em>reportProgress</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>confs</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a> &gt;) – </li>
+<li><strong>reportProgress</strong> (<em>bool</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">calcAllEnergies</code><span class="sig-paren">(</span><em>confs</em>, <em>reportProgress</em>, <em>table</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>confs</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.ScoredConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$ScoredConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ScoredConf</span></code></a> &gt;) – </li>
+<li><strong>reportProgress</strong> (<em>bool</em>) – </li>
+<li><strong>table</strong> (<code class="docutils literal notranslate"><span class="pre">ConfDB</span></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">List</span></code></code> &lt; <a class="reference internal" href="api.confspace.ConfSearch.EnergiedConf.html" title="edu.duke.cs.osprey.confspace.ConfSearch$EnergiedConf"><code class="xref java java-ref docutils literal notranslate"><span class="pre">EnergiedConf</span></code></a> &gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makeIntraShellObjFcn">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makeIntraShellObjFcn</code><span class="sig-paren">(</span><em>pos</em>, <em>rc</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makeIntraShellObjFcn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos</strong> (<em>int</em>) – </li>
+<li><strong>rc</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.minimization.MoleculeObjectiveFunction.html" title="edu.duke.cs.osprey.minimization.MoleculeObjectiveFunction"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MoleculeObjectiveFunction</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ConfEnergyCalculator.makePairwiseObjFcn">
+<code class="descclassname">ConfEnergyCalculator.</code><code class="descname">makePairwiseObjFcn</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em><span class="sig-paren">)</span><a class="headerlink" href="#ConfEnergyCalculator.makePairwiseObjFcn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.minimization.MoleculeObjectiveFunction.html" title="edu.duke.cs.osprey.minimization.MoleculeObjectiveFunction"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MoleculeObjectiveFunction</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Donald Lab, Department of Computer Science, Duke University. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

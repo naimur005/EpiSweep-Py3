@@ -1,0 +1,398 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>ResidueInteractions &#8212; Osprey 3.2.304 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">ResidueInteractions</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.energy.ResidueInteractions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>ResidueInteractions</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="residueinteractions">
+<h1>ResidueInteractions<a class="headerlink" href="#residueinteractions" title="Permalink to this headline">¶</a></h1>
+<p>Java class: <code class="docutils literal notranslate"><span class="pre">edu.duke.cs.osprey.energy.ResidueInteractions</span></code></p>
+<blockquote>
+<div><p>Represents interactions between residues (or within single residues) based on residue
+numbers. The interaction is represented in a <a class="reference internal" href="api.energy.ResidueInteractions.Pair.html" title="edu.duke.cs.osprey.energy.ResidueInteractions$Pair"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Pair</span></code></a>.</p>
+<p>Does not rely on specific molecules, so residue interactions are portable
+between different molecules, or molecule copies.</p>
+<p>The <a class="reference internal" href="api.energy.ResInterGen.html" title="edu.duke.cs.osprey.energy.ResInterGen"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResInterGen</span></code></a> helper class can assist with creating residue interactions.</p>
+</div></blockquote>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<p><em>This is a Java class which has been exposed to the Python API. For more information
+on how to call constructors on Java objects, see the tutorial:</em> <a class="reference internal" href="constructors.html#constructors"><span class="std std-ref">Accessing Java Classes from Python</span></a>.</p>
+<hr class="docutils" />
+<dl class="method">
+<dt id="ResidueInteractions.ResidueInteractions">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">ResidueInteractions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.ResidueInteractions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ResidueInteractions.</code><code class="descname">ResidueInteractions</code><span class="sig-paren">(</span><em>pairs</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pairs</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.Pair.html" title="edu.duke.cs.osprey.energy.ResidueInteractions$Pair"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Pair</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="ResidueInteractions.contains">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">contains</code><span class="sig-paren">(</span><em>pair</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.contains" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pair</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.Pair.html" title="edu.duke.cs.osprey.energy.ResidueInteractions$Pair"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Pair</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.get">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">get</code><span class="sig-paren">(</span><em>resNum1</em>, <em>resNum2</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.get" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>resNum1</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+<li><strong>resNum2</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.energy.ResidueInteractions.Pair.html" title="edu.duke.cs.osprey.energy.ResidueInteractions$Pair"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Pair</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.add">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">add</code><span class="sig-paren">(</span><em>pair</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.add" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pair</strong> (<a class="reference internal" href="api.energy.ResidueInteractions.Pair.html" title="edu.duke.cs.osprey.energy.ResidueInteractions$Pair"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Pair</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.addAll">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">addAll</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.addAll" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.addSingle">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">addSingle</code><span class="sig-paren">(</span><em>resNum</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.addSingle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resNum</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ResidueInteractions.</code><code class="descname">addSingle</code><span class="sig-paren">(</span><em>resNum</em>, <em>weight</em>, <em>offset</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resNum</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+<li><strong>weight</strong> (<em>float</em>) – </li>
+<li><strong>offset</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.addPair">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">addPair</code><span class="sig-paren">(</span><em>resNum1</em>, <em>resNum2</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.addPair" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resNum1</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+<li><strong>resNum2</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ResidueInteractions.</code><code class="descname">addPair</code><span class="sig-paren">(</span><em>resNum1</em>, <em>resNum2</em>, <em>weight</em>, <em>offset</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resNum1</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+<li><strong>resNum2</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+<li><strong>weight</strong> (<em>float</em>) – </li>
+<li><strong>offset</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.addComplete">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">addComplete</code><span class="sig-paren">(</span><em>residues</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.addComplete" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residues</strong> (<a class="reference internal" href="api.structure.Residues.html" title="edu.duke.cs.osprey.structure.Residues"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Residues</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">ResidueInteractions.</code><code class="descname">addComplete</code><span class="sig-paren">(</span><em>residues</em>, <em>weight</em>, <em>offset</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>residues</strong> (<a class="reference internal" href="api.structure.Residues.html" title="edu.duke.cs.osprey.structure.Residues"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Residues</span></code></a>) – </li>
+<li><strong>weight</strong> (<em>float</em>) – </li>
+<li><strong>offset</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.getResidueNumbers">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">getResidueNumbers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.getResidueNumbers" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Set</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">str</span></code> &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.iterator">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">iterator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.iterator" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Iterator</span></code> &lt; <a class="reference internal" href="api.energy.ResidueInteractions.Pair.html" title="edu.duke.cs.osprey.energy.ResidueInteractions$Pair"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Pair</span></code></a> &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.size">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.filter">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">filter</code><span class="sig-paren">(</span><em>residues</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.filter" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>residues</strong> (<a class="reference internal" href="api.structure.Residues.html" title="edu.duke.cs.osprey.structure.Residues"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Residues</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.structure.Residues.html" title="edu.duke.cs.osprey.structure.Residues"><code class="xref java java-ref docutils literal notranslate"><span class="pre">Residues</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ResidueInteractions.subtract">
+<code class="descclassname">ResidueInteractions.</code><code class="descname">subtract</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#ResidueInteractions.subtract" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<a class="reference internal" href="#" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – </li>
+<li><strong>b</strong> (<a class="reference internal" href="#" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#" title="edu.duke.cs.osprey.energy.ResidueInteractions"><code class="xref java java-ref docutils literal notranslate"><span class="pre">ResidueInteractions</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Donald Lab, Department of Computer Science, Duke University. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

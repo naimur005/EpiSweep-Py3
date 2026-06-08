@@ -1,0 +1,896 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>MathTools &#8212; Osprey 3.2.304 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">MathTools</a><ul>
+<li><a class="reference internal" href="#constants">Constants</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.tools.MathTools.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>MathTools</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="mathtools">
+<h1>MathTools<a class="headerlink" href="#mathtools" title="Permalink to this headline">¶</a></h1>
+<p>Java class: <code class="docutils literal notranslate"><span class="pre">edu.duke.cs.osprey.tools.MathTools</span></code></p>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt>
+<code class="descname">MathTools.BigPositiveInfinity = MagicBigDecimal()</code></dt>
+<dd><p>Sadly, Java’s BigDecimal can’t encode values of +Infinity or -Infinity =(
+These magic constants are a complete hack to try to work around that.
+Don’t try to use this value in any arithmetic. That won’t work.
+Just compare BigDecimal references to check for infinity, e.g. if (myval == BigPositiveInfinity) { … }</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">java.math$BigDecimal</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">MathTools.BigNegativeInfinity = MagicBigDecimal()</code></dt>
+<dd><p>See BigPositiveInfinity for usage instructions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">java.math$BigDecimal</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">MathTools.BigNaN = MagicBigDecimal()</code></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">java.math$BigDecimal</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="MathTools.divUp">
+<code class="descclassname">MathTools.</code><code class="descname">divUp</code><span class="sig-paren">(</span><em>num</em>, <em>denom</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.divUp" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>num</strong> (<em>int</em>) – </li>
+<li><strong>denom</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.roundUpToMultiple">
+<code class="descclassname">MathTools.</code><code class="descname">roundUpToMultiple</code><span class="sig-paren">(</span><em>val</em>, <em>base</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.roundUpToMultiple" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>val</strong> (<em>int</em>) – </li>
+<li><strong>base</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.powerset">
+<code class="descclassname">MathTools.</code><code class="descname">powerset</code><span class="sig-paren">(</span><em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.powerset" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>list</strong> (<code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">T</span></code> &gt;) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">T</span></code> &gt; &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.powersetUpTo">
+<code class="descclassname">MathTools.</code><code class="descname">powersetUpTo</code><span class="sig-paren">(</span><em>list</em>, <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.powersetUpTo" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>list</strong> (<code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">T</span></code> &gt;) – </li>
+<li><strong>size</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">T</span></code> &gt; &gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.cartesianProduct">
+<code class="descclassname">MathTools.</code><code class="descname">cartesianProduct</code><span class="sig-paren">(</span><em>lists</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.cartesianProduct" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lists</strong> (<code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">T</span></code> &gt; &gt;) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Iterable</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">List</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">T</span></code> &gt; &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isZero">
+<code class="descclassname">MathTools.</code><code class="descname">isZero</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isZero" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>i</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigInteger</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.biggen">
+<code class="descclassname">MathTools.</code><code class="descname">biggen</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.biggen" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<em>float</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">MathTools.</code><code class="descname">biggen</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<em>long</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">MathTools.</code><code class="descname">biggen</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>val</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">MathTools.</code><code class="descname">biggen</code><span class="sig-paren">(</span><em>lower</em>, <em>upper</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>lower</strong> (<em>float</em>) – </li>
+<li><strong>upper</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.tools.MathTools.BigDecimalBounds.html" title="edu.duke.cs.osprey.tools.MathTools$BigDecimalBounds"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimalBounds</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">MathTools.</code><code class="descname">biggen</code><span class="sig-paren">(</span><em>lower</em>, <em>upper</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>lower</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+<li><strong>upper</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.tools.MathTools.BigDecimalBounds.html" title="edu.duke.cs.osprey.tools.MathTools$BigDecimalBounds"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimalBounds</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.compare">
+<code class="descclassname">MathTools.</code><code class="descname">compare</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.compare" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isSameValue">
+<code class="descclassname">MathTools.</code><code class="descname">isSameValue</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isSameValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests for sameness of values,
+rather than BigDecimal.equals(), which tests sameness of representation
+(i.e., the same value can have multiple representations in BigDecimal)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isAbsolutelySame">
+<code class="descclassname">MathTools.</code><code class="descname">isAbsolutelySame</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>epsilon</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isAbsolutelySame" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>epsilon</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isRelativelySame">
+<code class="descclassname">MathTools.</code><code class="descname">isRelativelySame</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>context</em>, <em>epsilon</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isRelativelySame" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>context</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MathContext</span></code></code>) – </li>
+<li><strong>epsilon</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">MathTools.</code><code class="descname">isZero</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isPositive">
+<code class="descclassname">MathTools.</code><code class="descname">isPositive</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isPositive" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isNegative">
+<code class="descclassname">MathTools.</code><code class="descname">isNegative</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isNegative" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isInf">
+<code class="descclassname">MathTools.</code><code class="descname">isInf</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isInf" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isFinite">
+<code class="descclassname">MathTools.</code><code class="descname">isFinite</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isFinite" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isNaN">
+<code class="descclassname">MathTools.</code><code class="descname">isNaN</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isNaN" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isLessThan">
+<code class="descclassname">MathTools.</code><code class="descname">isLessThan</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isLessThan" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a &lt; b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isLessThanOrEqual">
+<code class="descclassname">MathTools.</code><code class="descname">isLessThanOrEqual</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isLessThanOrEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a &lt;= b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isGreaterThan">
+<code class="descclassname">MathTools.</code><code class="descname">isGreaterThan</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isGreaterThan" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a &gt; b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.isGreaterThanOrEqual">
+<code class="descclassname">MathTools.</code><code class="descname">isGreaterThanOrEqual</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.isGreaterThanOrEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a &gt;= b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.bigNegate">
+<code class="descclassname">MathTools.</code><code class="descname">bigNegate</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.bigNegate" title="Permalink to this definition">¶</a></dt>
+<dd><p>return -a, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.bigAdd">
+<code class="descclassname">MathTools.</code><code class="descname">bigAdd</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.bigAdd" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a + b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>context</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MathContext</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.bigSubtract">
+<code class="descclassname">MathTools.</code><code class="descname">bigSubtract</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.bigSubtract" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a - b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>context</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MathContext</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.bigMultiply">
+<code class="descclassname">MathTools.</code><code class="descname">bigMultiply</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.bigMultiply" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a*b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>context</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MathContext</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.bigDivide">
+<code class="descclassname">MathTools.</code><code class="descname">bigDivide</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.bigDivide" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a/b, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>context</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MathContext</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.bigDivideDivide">
+<code class="descclassname">MathTools.</code><code class="descname">bigDivideDivide</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.bigDivideDivide" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a/b/c, correctly handling -Inf, +Inf, and NaN</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>a</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>b</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>c</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </li>
+<li><strong>context</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">MathContext</span></code></code>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.log10">
+<code class="descclassname">MathTools.</code><code class="descname">log10</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.log10" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.log10p1">
+<code class="descclassname">MathTools.</code><code class="descname">log10p1</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.log10p1" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns log10(x+1)</p>
+<p>chosen because it maps [0,inf] to [0,inf]
+whereas just log10 maps [0,inf] to [-inf,inf]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigDecimal</span></code></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">MathTools.</code><code class="descname">log10p1</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> (<em>float</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.formatBytes">
+<code class="descclassname">MathTools.</code><code class="descname">formatBytes</code><span class="sig-paren">(</span><em>bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.formatBytes" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>bytes</strong> (<em>long</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.numPairsPerSingle">
+<code class="descclassname">MathTools.</code><code class="descname">numPairsPerSingle</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.numPairsPerSingle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.numTriplesPerSingle">
+<code class="descclassname">MathTools.</code><code class="descname">numTriplesPerSingle</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.numTriplesPerSingle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.numTriplesPerPair">
+<code class="descclassname">MathTools.</code><code class="descname">numTriplesPerPair</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.numTriplesPerPair" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.numQuadsPerSingle">
+<code class="descclassname">MathTools.</code><code class="descname">numQuadsPerSingle</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.numQuadsPerSingle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="MathTools.numQuadsPerPair">
+<code class="descclassname">MathTools.</code><code class="descname">numQuadsPerPair</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#MathTools.numQuadsPerPair" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Donald Lab, Department of Computer Science, Duke University. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

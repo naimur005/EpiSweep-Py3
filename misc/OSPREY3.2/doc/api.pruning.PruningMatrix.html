@@ -1,0 +1,749 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>PruningMatrix &#8212; Osprey 3.2.304 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/style.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">PruningMatrix</a><ul>
+<li><a class="reference internal" href="#constructors">Constructors</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.pruning.PruningMatrix.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>PruningMatrix</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="pruningmatrix">
+<h1>PruningMatrix<a class="headerlink" href="#pruningmatrix" title="Permalink to this headline">¶</a></h1>
+<p>Java class: <code class="docutils literal notranslate"><span class="pre">edu.duke.cs.osprey.pruning.PruningMatrix</span></code></p>
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h2>
+<p><em>This is a Java class which has been exposed to the Python API. For more information
+on how to call constructors on Java objects, see the tutorial:</em> <a class="reference internal" href="constructors.html#constructors"><span class="std std-ref">Accessing Java Classes from Python</span></a>.</p>
+<hr class="docutils" />
+<dl class="method">
+<dt id="PruningMatrix.PruningMatrix">
+<code class="descclassname">PruningMatrix.</code><code class="descname">PruningMatrix</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.PruningMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> (<a class="reference internal" href="#" title="edu.duke.cs.osprey.pruning.PruningMatrix"><code class="xref java java-ref docutils literal notranslate"><span class="pre">PruningMatrix</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">PruningMatrix.</code><code class="descname">PruningMatrix</code><span class="sig-paren">(</span><em>cSpace</em>, <em>pruningInterval</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cSpace</strong> (<code class="docutils literal notranslate"><span class="pre">ConfSpace</span></code>) – </li>
+<li><strong>pruningInterval</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">PruningMatrix.</code><code class="descname">PruningMatrix</code><span class="sig-paren">(</span><em>confSpace</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>confSpace</strong> (<code class="docutils literal notranslate"><span class="pre">SimpleConfSpace</span></code>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">PruningMatrix.</code><code class="descname">PruningMatrix</code><span class="sig-paren">(</span><em>numPos</em>, <em>numAllowedAtPos</em>, <em>pruningInterval</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>numPos</strong> (<em>int</em>) – </li>
+<li><strong>numAllowedAtPos</strong> (<em>int</em><em> [</em><em>]</em>) – </li>
+<li><strong>pruningInterval</strong> (<em>float</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="PruningMatrix.getTuple">
+<code class="descclassname">PruningMatrix.</code><code class="descname">getTuple</code><span class="sig-paren">(</span><em>tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.getTuple" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tuple</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">Boolean</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.unprunedRCsAtPos">
+<code class="descclassname">PruningMatrix.</code><code class="descname">unprunedRCsAtPos</code><span class="sig-paren">(</span><em>out</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.unprunedRCsAtPos" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>out</strong> (<code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">Integer</span></code> &gt;) – </li>
+<li><strong>pos</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">PruningMatrix.</code><code class="descname">unprunedRCsAtPos</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">Integer</span></code> &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.prunedRCsAtPos">
+<code class="descclassname">PruningMatrix.</code><code class="descname">prunedRCsAtPos</code><span class="sig-paren">(</span><em>out</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.prunedRCsAtPos" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>out</strong> (<code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">Integer</span></code> &gt;) – </li>
+<li><strong>pos</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descclassname">PruningMatrix.</code><code class="descname">prunedRCsAtPos</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">Integer</span></code> &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.unprunedRCTuplesAtPos">
+<code class="descclassname">PruningMatrix.</code><code class="descname">unprunedRCTuplesAtPos</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.unprunedRCTuplesAtPos" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> (<code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">Integer</span></code> &gt;) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">RCTuple</span></code> &gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.isPruned">
+<code class="descclassname">PruningMatrix.</code><code class="descname">isPruned</code><span class="sig-paren">(</span><em>tup</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.isPruned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tup</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.isPrunedHigherOrder">
+<code class="descclassname">PruningMatrix.</code><code class="descname">isPrunedHigherOrder</code><span class="sig-paren">(</span><em>tup</em>, <em>curIndex</em>, <em>htf</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.isPrunedHigherOrder" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tup</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </li>
+<li><strong>curIndex</strong> (<em>int</em>) – </li>
+<li><strong>htf</strong> (<code class="docutils literal notranslate"><span class="pre">HigherTupleFinder</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">Boolean</span></code> &gt;) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.pruneSingle">
+<code class="descclassname">PruningMatrix.</code><code class="descname">pruneSingle</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.pruneSingle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.prunePair">
+<code class="descclassname">PruningMatrix.</code><code class="descname">prunePair</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.prunePair" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.pruneTriple">
+<code class="descclassname">PruningMatrix.</code><code class="descname">pruneTriple</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em>, <em>pos3</em>, <em>rc3</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.pruneTriple" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+<li><strong>pos3</strong> (<em>int</em>) – </li>
+<li><strong>rc3</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.prunePairsFromSingles">
+<code class="descclassname">PruningMatrix.</code><code class="descname">prunePairsFromSingles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.prunePairsFromSingles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.prunePairsFromSingle">
+<code class="descclassname">PruningMatrix.</code><code class="descname">prunePairsFromSingle</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.prunePairsFromSingle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.isSinglePruned">
+<code class="descclassname">PruningMatrix.</code><code class="descname">isSinglePruned</code><span class="sig-paren">(</span><em>pos</em>, <em>rc</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.isSinglePruned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos</strong> (<em>int</em>) – </li>
+<li><strong>rc</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.isPairPruned">
+<code class="descclassname">PruningMatrix.</code><code class="descname">isPairPruned</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.isPairPruned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.isTriplePruned">
+<code class="descclassname">PruningMatrix.</code><code class="descname">isTriplePruned</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em>, <em>pos3</em>, <em>rc3</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.isTriplePruned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+<li><strong>pos3</strong> (<em>int</em>) – </li>
+<li><strong>rc3</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.isQuadruplePruned">
+<code class="descclassname">PruningMatrix.</code><code class="descname">isQuadruplePruned</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em>, <em>pos3</em>, <em>rc3</em>, <em>pos4</em>, <em>rc4</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.isQuadruplePruned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+<li><strong>pos3</strong> (<em>int</em>) – </li>
+<li><strong>rc3</strong> (<em>int</em>) – </li>
+<li><strong>pos4</strong> (<em>int</em>) – </li>
+<li><strong>rc4</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.isQuintuplePruned">
+<code class="descclassname">PruningMatrix.</code><code class="descname">isQuintuplePruned</code><span class="sig-paren">(</span><em>pos1</em>, <em>rc1</em>, <em>pos2</em>, <em>rc2</em>, <em>pos3</em>, <em>rc3</em>, <em>pos4</em>, <em>rc4</em>, <em>pos5</em>, <em>rc5</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.isQuintuplePruned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>rc1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>rc2</strong> (<em>int</em>) – </li>
+<li><strong>pos3</strong> (<em>int</em>) – </li>
+<li><strong>rc3</strong> (<em>int</em>) – </li>
+<li><strong>pos4</strong> (<em>int</em>) – </li>
+<li><strong>rc4</strong> (<em>int</em>) – </li>
+<li><strong>pos5</strong> (<em>int</em>) – </li>
+<li><strong>rc5</strong> (<em>int</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.markAsPruned">
+<code class="descclassname">PruningMatrix.</code><code class="descname">markAsPruned</code><span class="sig-paren">(</span><em>tup</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.markAsPruned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tup</strong> (<code class="docutils literal notranslate"><span class="pre">RCTuple</span></code>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.countPrunedRCs">
+<code class="descclassname">PruningMatrix.</code><code class="descname">countPrunedRCs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.countPrunedRCs" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.countPrunedPairs">
+<code class="descclassname">PruningMatrix.</code><code class="descname">countPrunedPairs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.countPrunedPairs" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.countPrunedTriples">
+<code class="descclassname">PruningMatrix.</code><code class="descname">countPrunedTriples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.countPrunedTriples" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.countUnprunedSingles">
+<code class="descclassname">PruningMatrix.</code><code class="descname">countUnprunedSingles</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.countUnprunedSingles" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> (<em>int</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.calcUnprunedConfsUpperBound">
+<code class="descclassname">PruningMatrix.</code><code class="descname">calcUnprunedConfsUpperBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.calcUnprunedConfsUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates an upper bound on the number of conformations remaining in
+the conformation space after all singles and pairs pruning.</p>
+<p>Uses a dynamic programming algorithm that runs in O(nm^2) time and O(nm) space
+where n is the number of design positions, and m is the max number of RCs at a position.</p>
+<p>This algorithm essentially under-estimates pruning by ignoring pruned pairs
+that are not between consecutive positions. The then the leftover pruned pairs
+have a nice structure that can be analyzed in polynomial time using dynamic programming.</p>
+<p>NOTE: Counting the exact size of the conformation space after pairs pruning is
+apparently #P-complete, and hence very hard to do. =P</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigInteger</span></code></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.calcUnprunedConfsLowerBound">
+<code class="descclassname">PruningMatrix.</code><code class="descname">calcUnprunedConfsLowerBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.calcUnprunedConfsLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates an lower bound on the number of conformations remaining in
+the conformation space after all singles and pairs pruning.</p>
+<p>Uses the same dynamic programming algorithm as the upper bound, but we
+perform a preprocessing step on the pruning matrix first.</p>
+<p>This algorithm essentially over-estimates pruning, by “upgrading” pruned pairs
+not between consecutive positions to pruned singles. The then the leftover pruned pairs
+have a nice structure that can be analyzed in polynomial time.</p>
+<p>NOTE: Counting the exact size of the conformation space after pairs pruning is
+apparently #P-complete, and hence very hard to do. =P</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="docutils literal notranslate"><code class="xref java java-ref docutils literal notranslate"><span class="pre">BigInteger</span></code></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.forEachUnprunedSingle">
+<code class="descclassname">PruningMatrix.</code><code class="descname">forEachUnprunedSingle</code><span class="sig-paren">(</span><em>consumer</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.forEachUnprunedSingle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>consumer</strong> (<a class="reference internal" href="api.pruning.PruningMatrix.SingleConsumer.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$SingleConsumer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">SingleConsumer</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.pruning.PruningMatrix.IteratorCommand.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$IteratorCommand"><code class="xref java java-ref docutils literal notranslate"><span class="pre">IteratorCommand</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.forEachUnprunedSingleAt">
+<code class="descclassname">PruningMatrix.</code><code class="descname">forEachUnprunedSingleAt</code><span class="sig-paren">(</span><em>pos1</em>, <em>consumer</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.forEachUnprunedSingleAt" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>consumer</strong> (<a class="reference internal" href="api.pruning.PruningMatrix.SingleConsumer.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$SingleConsumer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">SingleConsumer</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.pruning.PruningMatrix.IteratorCommand.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$IteratorCommand"><code class="xref java java-ref docutils literal notranslate"><span class="pre">IteratorCommand</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.forEachUnprunedPair">
+<code class="descclassname">PruningMatrix.</code><code class="descname">forEachUnprunedPair</code><span class="sig-paren">(</span><em>consumer</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.forEachUnprunedPair" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>consumer</strong> (<a class="reference internal" href="api.pruning.PruningMatrix.PairConsumer.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$PairConsumer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">PairConsumer</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.pruning.PruningMatrix.IteratorCommand.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$IteratorCommand"><code class="xref java java-ref docutils literal notranslate"><span class="pre">IteratorCommand</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.forEachUnprunedPairAt">
+<code class="descclassname">PruningMatrix.</code><code class="descname">forEachUnprunedPairAt</code><span class="sig-paren">(</span><em>pos1</em>, <em>pos2</em>, <em>consumer</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.forEachUnprunedPairAt" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>consumer</strong> (<a class="reference internal" href="api.pruning.PruningMatrix.PairConsumer.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$PairConsumer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">PairConsumer</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.pruning.PruningMatrix.IteratorCommand.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$IteratorCommand"><code class="xref java java-ref docutils literal notranslate"><span class="pre">IteratorCommand</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.forEachUnprunedTriple">
+<code class="descclassname">PruningMatrix.</code><code class="descname">forEachUnprunedTriple</code><span class="sig-paren">(</span><em>consumer</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.forEachUnprunedTriple" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>consumer</strong> (<a class="reference internal" href="api.pruning.PruningMatrix.TripleConsumer.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$TripleConsumer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TripleConsumer</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="api.pruning.PruningMatrix.IteratorCommand.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$IteratorCommand"><code class="xref java java-ref docutils literal notranslate"><span class="pre">IteratorCommand</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PruningMatrix.forEachUnprunedTripleAt">
+<code class="descclassname">PruningMatrix.</code><code class="descname">forEachUnprunedTripleAt</code><span class="sig-paren">(</span><em>pos1</em>, <em>pos2</em>, <em>pos3</em>, <em>consumer</em><span class="sig-paren">)</span><a class="headerlink" href="#PruningMatrix.forEachUnprunedTripleAt" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pos1</strong> (<em>int</em>) – </li>
+<li><strong>pos2</strong> (<em>int</em>) – </li>
+<li><strong>pos3</strong> (<em>int</em>) – </li>
+<li><strong>consumer</strong> (<a class="reference internal" href="api.pruning.PruningMatrix.TripleConsumer.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$TripleConsumer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">TripleConsumer</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="api.pruning.PruningMatrix.IteratorCommand.html" title="edu.duke.cs.osprey.pruning.PruningMatrix$IteratorCommand"><code class="xref java java-ref docutils literal notranslate"><span class="pre">IteratorCommand</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Osprey 3.2.304 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Donald Lab, Department of Computer Science, Duke University. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
