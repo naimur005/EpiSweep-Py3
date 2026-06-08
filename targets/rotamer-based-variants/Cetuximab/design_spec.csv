@@ -1,0 +1,11 @@
+design,rotamer
+wt_seq,cetuximab.fasta
+structure,cetuximab.pdb
+epitope_score,propred.csv
+epitope_threshold,5
+choices,cetuximab_rot_choices.csv
+pairs,cetuximab_pairs.csv
+rot_potential,cetuximab_rot_pot.dat
+num_curves,1
+mut_load,5-10
+design_output,cetuximab_rot_designs.csv

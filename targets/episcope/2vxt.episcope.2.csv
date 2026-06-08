@@ -1,0 +1,3 @@
+design,design_pos,disruption_score,number_of_dock,dock_in_contact_list,disruption_score_list
+R39K|D40A|Q154T,39|40|154,1.4202999999999999,8,2vxt.10.3.csv|2vxt.00.3.csv|2vxt.06.3.csv|2vxt.07.3.csv|2vxt.04.3.csv|2vxt.02.3.csv|2vxt.03.3.csv|2vxt.09.3.csv,0.9407|1.1075|0.9199|2.242|2.0585|1.1086|0.7521|2.2331
+N16D|R131K|L133Y,16|131|133,1.272875,4,2vxt.08.3.csv|2vxt.01.3.csv|2vxt.05.3.csv|2vxt.11.3.csv,1.2887|0.6673|2.5608|0.5747

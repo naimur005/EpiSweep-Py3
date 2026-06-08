@@ -1,0 +1,10 @@
+design,humanization
+wt_seq,cetuximab.fasta
+structure,cetuximab.pdb
+choices,cetuximab_rot_choices.csv
+pairs,cetuximab_pairs.csv
+rot_potential,cetuximab_rot_pot.dat
+num_curves,1
+mut_load,5-10
+design_output,cetuximab_rot_designs.csv
+precomputed_HSC,cetuximab_precomputed_HSC.csv

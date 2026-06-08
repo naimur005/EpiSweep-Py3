@@ -1,0 +1,15 @@
+design,rotamer
+wt_seq,zif268.fasta
+structure,zif268.pdb
+msa,zif268_MSA.fasta
+mut_constraint,zif268_mut_constraints.csv
+epitope_score,propred.csv
+epitope_threshold,5
+choices,zif268_rot_choices.csv
+pairs,zif268_pairs.csv
+rot_potential,zif268_rot_pot.dat
+num_curves,3
+mut_load,2
+library_size,10000-20000
+design_output,zif268_rot_designs.csv
+precomputed_epitope,zif268_episcore.csv

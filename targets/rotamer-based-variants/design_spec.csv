@@ -1,0 +1,13 @@
+design,rotamer
+wt_seq,lst_cwbd.fasta
+msa,lst_cwbd_MSA.fasta
+structure,lst_cwbd.pdb
+epitope_score,propred.csv
+epitope_threshold,5
+choices,lst_cwbd_rot_choices.csv
+pairs,lst_cwbd_pairs.csv
+mut_constraint,lst_cwbd_mut_constraints.csv
+rot_potential,lst_cwbd_rot_pot.dat
+num_curves,2
+mut_load,1-2
+design_output,lst_cwbd_rot_designs.csv

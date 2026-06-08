@@ -1,0 +1,11 @@
+design,rotamer
+wt_seq,3sqo.fasta
+structure,3sqo.pdb
+epitope_score,propred.csv
+epitope_threshold,5
+choices,3sqo_rot_choices.csv
+pairs,3sqo_pairs.csv
+rot_potential,3sqo_rot_pot.dat
+num_curves,1
+mut_load,1-300
+design_output,3sqo_rot_designs.csv

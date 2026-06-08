@@ -1,0 +1,45 @@
+
+OSPREY Protein Redesign Software Version 2.0
+Copyright (C) 2001-2012 Bruce Donald Lab, Duke University
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Lesser General Public License for more details.
+
+There are additional restrictions imposed on the use and distribution
+of this open-source code, including: (A) this header must be included
+in any modification or extension of the code; (B) you are required to
+cite our papers in any publications that use this code.  The citation
+for the various different modules of our software, together with a
+complete list of requirements and restrictions are found in the
+document license.pdf enclosed with this distribution.
+
+OSPREY running on 8 thread(s)
+
+Parameter HELECT set to true
+Parameter HVDW set to false
+Parameter HSTERIC set to false
+Parameter DISTDEPDIELECT set to true
+Parameter DIELECTCONST not set. Using default value 6.0
+Parameter DODIHEDE set to true
+Parameter DOSOLVATIONE not set. Using default value true
+Parameter SOLVSCALE not set. Using default value 0.5
+Parameter VDWMULT set to 0.95
+Parameter STERICTHRESH set to 0.4
+Parameter SOFTSTERICTHRESH set to 1.5
+Parameter DATADIR set to /app/misc/OSPREY2.1/dataFiles
+Parameter FORCEFIELD not set. Using default value AMBER
+Parameter ENTROPYSCALE not set. Using default value 0.0
+Parameter ROTFILE set to LovellRotamer.dat
+Parameter AUTOFIX not set. Using default value true
+Parameter RAMAGLYFILE not set. Using default value rama500-gly-sym.data
+Parameter RAMAPROFILE not set. Using default value rama500-pro.data
+Parameter RAMAGENFILE not set. Using default value rama500-general.data
+Parameter RAMAPREPROFILE not set. Using default value rama500-prepro.data
+KStar Finished.

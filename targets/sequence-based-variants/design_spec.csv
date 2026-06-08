@@ -1,0 +1,12 @@
+design,sequence
+wt_seq,lst_cwbd.fasta
+msa,lst_cwbd_MSA.fasta
+epitope_score,propred.csv
+epitope_threshold,5
+choices,lst_cwbd_seq_choices.csv
+pairs,lst_cwbd_pairs.csv
+mut_constraint,lst_cwbd_mut_constraints.csv
+seq_potential,lst_cwbd_seq_pot.csv
+num_curves,5
+mut_load,1-4
+design_output,lst_cwbd_seq_designs.csv
