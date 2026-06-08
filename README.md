@@ -86,9 +86,8 @@ python bin/sweep.py design_spec.csv
 ```
 #Plot Pareto frontier
 Rscript bin/pareto_curve.R -i design_spec.csv -o pareto.pdf
-```
-## Predict and visualize epitopes
-```
+
+#Predict and visualize epitopes
 python bin/epitopes.py -i design_spec.csv -n 0 -o epitopes.csv
 Rscript bin/epitope_map.R -i epitopes.csv -o epitope_map.pdf
 ```
