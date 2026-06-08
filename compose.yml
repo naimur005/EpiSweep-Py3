@@ -1,0 +1,12 @@
+#version: '3.9'
+
+services:
+  episweep:
+    image: episweep-os
+    container_name: episweep
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    restart: unless-stopped
