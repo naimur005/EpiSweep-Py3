@@ -98,4 +98,7 @@ If you use EpiSweep-Py3 in your research, please cite:
 > *EpiSweep: Computationally-driven reengineering of therapeutic proteins to reduce immunogenicity while maintaining function.*
 > **Methods in Molecular Biology**, 1529, 375–398.
 >
-> DOI: https://doi.org/10.1007/978-1-4939-6637-0_20
+> DOI: [10.1007/978-1-4939-6637-0_20](https://doi.org/10.1007/978-1-4939-6637-0_20)
+
+## 📧 Contact
+> Md Naimur Rahman - naimur005@gmail.com
